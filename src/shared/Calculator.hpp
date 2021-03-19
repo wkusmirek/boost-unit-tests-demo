@@ -4,10 +4,10 @@
 #include <string>
 
 
-class Bar
+class Calculator
 {
 public:
-    Bar(std::string s);
+    Calculator(std::string s);
 
     std::string get();
     void put(std::string&);
