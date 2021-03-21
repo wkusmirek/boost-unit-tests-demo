@@ -1,16 +1,30 @@
 #include "Calculator.hpp"
+#include <stdexcept>
 
-Calculator::Calculator(std::string s) : bar_(s)
+Calculator::Calculator(int num1, int num2) : num1_(num1), num2_(num2)
 {
     // constructor
 }
 
-std::string Calculator::get()
+int Calculator::add()
 {
-    return bar_;
+    return num1_ + num2_;
 }
 
-void Calculator::put(std::string &text)
+int Calculator::min()
 {
-    bar_ = text;
+    return num1_ - num2_;
+}
+
+int Calculator::mult()
+{
+    return num1_ * num2_;
+}
+
+int Calculator::div()
+{
+    if (num2_ == 0) {
+        throw std::runtime_error("Division by zero!!!");
+    }
+    return num1_ / num2_;
 }

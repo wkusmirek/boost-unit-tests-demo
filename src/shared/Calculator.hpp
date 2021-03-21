@@ -1,5 +1,5 @@
-#ifndef CMAKE_BOOST_DEMO_BAR_HPP
-#define CMAKE_BOOST_DEMO_BAR_HPP
+#ifndef CALCULATOR_HPP
+#define CALCULATOR_HPP
 
 #include <string>
 
@@ -7,15 +7,17 @@
 class Calculator
 {
 public:
-    Calculator(std::string s);
+    Calculator(int num1, int num2);
 
-    std::string get();
-    void put(std::string&);
+    int add();
+    int min();
+    int mult();
+    int div();
 
 private:
-    std::string bar_;
-
+    int num1_;
+    int num2_;
 };
 
 
-#endif //CMAKE_BOOST_DEMO_BAR_HPP
+#endif //CALCULATOR_HPP
