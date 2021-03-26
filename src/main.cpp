@@ -1,11 +1,12 @@
 #include <iostream>
-#include "shared/Calculator.hpp"
+#include "shared/calculator/Calculator.hpp"
+#include "shared/client/Client.hpp"
+#include "shared/product/Product.hpp"
+#include "Shop.hpp"
 
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
-
-    //Calculator calculator(1,2);
 
     return 0;
 }

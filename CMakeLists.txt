@@ -13,13 +13,17 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(DEMO_INCLUDES ${DEMO_INCLUDES} ${PROJECT_SOURCE_DIR}/src)
 set(DEMO_INCLUDES ${DEMO_INCLUDES} ${PROJECT_SOURCE_DIR}/shared)
 
-# Gather the header and source files
-#file(GLOB_RECURSE INC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.hpp)
-#file(GLOB_RECURSE SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
-
 # Gather all sources except the main entry point
-file(GLOB_RECURSE INC_FILES src/*/*.hpp)
-file(GLOB_RECURSE SRC_FILES src/*/*.cpp)
+file(GLOB_RECURSE INC_FILES src/shared/calculator/*.hpp)
+file(GLOB_RECURSE INC_FILES src/shared/client/*.hpp)
+file(GLOB_RECURSE INC_FILES src/shared/product/*.hpp)
+file(GLOB_RECURSE INC_FILES src/*.hpp)
+file(GLOB_RECURSE SRC_FILES src/Shop.cpp)
+
+set(calculator src/shared/calculator/Calculator.cpp)
+set(client src/shared/client/Client.cpp)
+set(product src/shared/product/Product.cpp)
+#set(myprogSRCS client.c)
 
 # Build object files for reuse (e.g. in test)
 #ADD_LIBRARY(demo_objects OBJECT ${INC_FILES} ${SRC_FILES})
@@ -34,7 +38,9 @@ add_subdirectory(test)
 include_directories(${Boost_INCLUDE_DIRS})
 
 # Build
-#set(SOURCE_FILES src/main.cpp $<TARGET_OBJECTS:demo_objects>)
-set(SOURCE_FILES src/main.cpp ${INC_FILES} ${SRC_FILES})
+set(SOURCE_FILES src/main.cpp src/Shop.cpp ${INC_FILES} ${SRC_FILES})
+add_library(calculator ${calculator})
+add_library(client ${client})
+add_library(product ${product})
 add_executable(cmake_boost_demo ${SOURCE_FILES})
-target_link_libraries(cmake_boost_demo ${Boost_LIBRARIES})
+target_link_libraries(cmake_boost_demo calculator client product ${Boost_LIBRARIES})
