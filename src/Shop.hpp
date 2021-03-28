@@ -13,7 +13,10 @@ public:
     Shop();
 
     void addProduct(std::string name, int price);
-    int calcPriceToBuyAnyProduct(); 
+    int calcPriceToBuyAnyProduct();
+
+    void addClient(std::string name, std::string surname, int age);
+    Client findClient(std::string name, std::string surname);
 
 private:
     std::vector<Product> products_;

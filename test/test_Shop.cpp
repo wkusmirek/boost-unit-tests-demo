@@ -20,6 +20,16 @@ BOOST_AUTO_TEST_SUITE(calculator_suite)
         BOOST_CHECK_EQUAL(shop.calcPriceToBuyAnyProduct(), 5);
     }
 
+    BOOST_AUTO_TEST_CASE(addClient)
+    {
+        Shop shop;
+        shop.addClient("Jan","Kowalski",5);
+        Client c = shop.findClient("Jan", "Kowalski");
+        BOOST_CHECK_EQUAL(c.getName(), "Jan");
+        BOOST_CHECK_EQUAL(c.getSurname(), "Kowalski");
+        BOOST_CHECK_EQUAL(c.getAge(), 5);
+    }
+
 BOOST_AUTO_TEST_SUITE_END()
 
 

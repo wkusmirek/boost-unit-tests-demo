@@ -19,3 +19,17 @@ int Shop::calcPriceToBuyAnyProduct()
     }
     return calculator_.getResult();
 }
+
+void Shop::addClient(std::string name, std::string surname, int age)
+{
+    clients_.push_back(Client(name, surname, age));
+}
+
+Client Shop::findClient(std::string name, std::string surname)
+{
+    for(std::vector<Client>::iterator it = clients_.begin(); it != clients_.end(); ++it) {
+        if(it->getName() == name && it->getSurname() == surname) {
+            return *it;
+        }
+    }
+}
