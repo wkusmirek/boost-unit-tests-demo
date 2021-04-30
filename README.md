@@ -1,4 +1,4 @@
-cmake-boost-demo
+cmake-boost-demo - mock object branch
 ================
 
 This repository provides a non-trivial example of setting up a C++ project 
