@@ -9,11 +9,6 @@ class Calculator
 public:
     Calculator(int num1, int num2);
 
-    int add();
-    int min();
-    int mult();
-    int div();
-
 private:
     int num1_;
     int num2_;
