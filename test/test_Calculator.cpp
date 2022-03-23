@@ -8,12 +8,11 @@
 
 BOOST_AUTO_TEST_SUITE(calculator_suite)
 
-    // BOOST_AUTO_TEST_CASE example
-    //BOOST_AUTO_TEST_CASE(add_test_1_1)
-    //{
-    //    Calculator calculator(1,1);
-    //    BOOST_CHECK_EQUAL(calculator.add(), 2);
-    //}
+    BOOST_AUTO_TEST_CASE(add_test_1_1)
+    {
+        Calculator calculator(1,1);
+        BOOST_CHECK_EQUAL(calculator.add(), 2);
+    }
 
 BOOST_AUTO_TEST_SUITE_END()
 
