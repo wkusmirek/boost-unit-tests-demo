@@ -14,7 +14,7 @@ file(GLOB UNIT_TESTS_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 # Include paths
 set(UNIT_TESTS_INCLUDES ${PROJECT_INCLUDE_DIR}
         ${PROJECT_SOURCE_DIR}/src
-        ${Boost_INCLUDE_DIR})
+        ${Boost_INCLUDE_DIRS})
 
 # Assign the include directories
 include_directories(${Boost_INCLUDE_DIRS})

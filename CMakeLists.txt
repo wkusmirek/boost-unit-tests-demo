@@ -31,6 +31,7 @@ find_package(Boost COMPONENTS filesystem system unit_test_framework REQUIRED)
 add_subdirectory(test)
 
 # Assign the include directories
+set(Boost_INCLUDE_DIRS /usr/local/include/boost)
 include_directories(${Boost_INCLUDE_DIRS})
 
 # Build
