@@ -7,6 +7,5 @@ Calculator::Calculator(int num1, int num2) : num1_(num1), num2_(num2)
 }
 
 int Calculator::add() {
-	int result = num1_ + num2_;
-	return result;
+	return result = num1_ + num2_;
 }
