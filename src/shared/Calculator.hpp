@@ -9,6 +9,8 @@ class Calculator
 public:
     Calculator(int num1, int num2);
 
+    int add();
+
 private:
     int num1_;
     int num2_;
