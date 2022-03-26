@@ -11,6 +11,5 @@ int Calculator::add() {
 }
 
 int Calculator::minus() {
-	int result = num1_ - num2_;
-        return result;
+	return num1_ - num2_;
 }
