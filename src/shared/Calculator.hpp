@@ -11,6 +11,8 @@ public:
 
     int add();
 
+    int minus();
+
 private:
     int num1_;
     int num2_;
