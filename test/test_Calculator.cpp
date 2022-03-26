@@ -20,6 +20,12 @@ BOOST_AUTO_TEST_SUITE(calculator_suite)
         BOOST_CHECK_EQUAL(calculator.minus(), 0);
     }
 
+    BOOST_AUTO_TEST_CASE(mul_test_1_1)
+    {
+        Calculator calculator(1,1);
+        BOOST_CHECK_EQUAL(calculator.mul(), 1);
+    }
+
 BOOST_AUTO_TEST_SUITE_END()
 
 
