@@ -13,6 +13,8 @@ public:
 
     int minus();
 
+    int mul();
+
 private:
     int num1_;
     int num2_;

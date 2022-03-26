@@ -13,3 +13,8 @@ int Calculator::add() {
 int Calculator::minus() {
 	return num1_ - num2_;
 }
+
+int Calculator::mul() {
+        int result = num1_ * num2_;
+        return result;
+}
