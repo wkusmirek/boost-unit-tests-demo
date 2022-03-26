@@ -15,6 +15,5 @@ int Calculator::minus() {
 }
 
 int Calculator::mul() {
-        int result = num1_ * num2_;
-        return result;
+        return num1_ * num2_;
 }
